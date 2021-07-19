@@ -5,7 +5,7 @@ import './GithubProfileInfo.css';
 type GithubProfileInfoProps = {
   name: string;
   thumbnail: string;
-  bio: string; // 자기소개
+  bio: any; // 자기소개
   blog: string;
 };
 
