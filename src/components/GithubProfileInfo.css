@@ -1,0 +1,21 @@
+.GithubProfileInfo {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.GithubProfileInfo .profile-head {
+  display: flex;
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+.GithubProfileInfo .profile-head img {
+  display: block;
+  width: 64px;
+  height: 64px;
+  border-radius: 32px;
+  margin-right: 16px;
+}
+
+.profile-head .profile-head .name {
+  font-weight: bold;
+}
