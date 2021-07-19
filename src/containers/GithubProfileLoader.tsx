@@ -35,3 +35,8 @@ function GithubProfileLoader() {
 }
 
 export default GithubProfileLoader;
+/*
+TS 환경에서 리덕스 미들웨어를 사용해서 비동기 작업을 했지만 
+매번 API 요청할 때 Thunk 만들기가 번거로우므로 Promise를 기반하여 비동기 작업을 하는 유틸함수를 생성
+추가적으로 리듀서에서도 비동기작업을 할 때 초기값, 로딩, 성공, 실패들의 상태를 만들어야 하는데 이를 리팩토링하여 좀 더 쉽게 리듀서를 구현 할 것
+*/
