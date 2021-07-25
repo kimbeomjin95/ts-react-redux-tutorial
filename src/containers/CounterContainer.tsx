@@ -1,7 +1,7 @@
-import { useDispatch, useSelector } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import Counter from '../components/Counter';
-import { RootState } from '../modules';
-import { decrease, increase, increaseBy } from '../modules/counter';
+import {RootState} from '../modules';
+import {decrease, increase, increaseBy} from '../modules/counter';
 
 function CounterContainer() {
   // redux안에 있는 상태조회 및 dispatch 가져오기

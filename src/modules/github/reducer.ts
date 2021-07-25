@@ -1,10 +1,6 @@
-import { createReducer } from 'typesafe-actions';
-import {
-  GET_USER_PROFILE,
-  GET_USER_PROFILE_ERROR,
-  GET_USER_PROFILE_SUCCESS,
-} from './actions';
-import { GithubAction, GithubState } from './types';
+import {createReducer} from 'typesafe-actions';
+import {GET_USER_PROFILE, GET_USER_PROFILE_ERROR, GET_USER_PROFILE_SUCCESS,} from './actions';
+import {GithubAction, GithubState} from './types';
 
 const initialState: GithubState = {
   userProfile: {

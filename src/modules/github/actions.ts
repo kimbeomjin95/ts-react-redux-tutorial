@@ -1,11 +1,10 @@
 // github에 관련된 리덕스 코드 작성
 // Thunk 함수를 작성하는데 해당 Thunk 함수에서 dispatch할 action을 작성(요청시작, 성공, 실패)
 
-import { AxiosError } from 'axios'; // AxiosError: axios에서 error가 발생했을 때 사용하는 error 객체 타입
-
+import {AxiosError} from 'axios'; // AxiosError: axios에서 error가 발생했을 때 사용하는 error 객체 타입
 // createAsyncAction: 비동기 작업에 관한 action들을 선언할 때 더 쉽게 만들수 있게 해주는 유틸 함수, createStandardAction대체
-import { createStandardAction, createAsyncAction } from 'typesafe-actions';
-import { GithubProfile } from '../../api/github';
+import {createAsyncAction} from 'typesafe-actions';
+import {GithubProfile} from '../../api/github';
 
 // 액션타입 선언
 export const GET_USER_PROFILE = 'github/GET_USER_PROFILE';

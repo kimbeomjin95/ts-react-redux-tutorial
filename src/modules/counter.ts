@@ -1,8 +1,4 @@
-import {
-  createStandardAction,
-  ActionType,
-  createReducer,
-} from 'typesafe-actions';
+import {createReducer, createStandardAction,} from 'typesafe-actions';
 
 // Duck 패턴
 
