@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import GithubProfileInfo from '../components/GithubProfileInfo';
 import GithubUsernameForm from '../components/GithubUsernameForm';
 import { RootState } from '../modules';
-import { getUserProfileThunk } from '../modules/github';
+import {getUserProfileAsync} from '../modules/github';
 
 function GithubProfileLoader() {
   // 상태도 조회, dispatch
@@ -13,7 +13,7 @@ function GithubProfileLoader() {
   const dispatch = useDispatch();
 
   const onSubmitUsername = (username: string) => {
-    dispatch(getUserProfileThunk(username));
+    dispatch(getUserProfileAsync.request(username));
   };
 
   // 조회

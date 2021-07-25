@@ -17,7 +17,7 @@ export const getUserProfileAsync = createAsyncAction(
   GET_USER_PROFILE, // request
   GET_USER_PROFILE_SUCCESS, // success
   GET_USER_PROFILE_ERROR, // failure
-)<undefined, GithubProfile, AxiosError>(); // <>으로 각 액션들의 payload 타입을 순서대로 넣어주면 됨, 마지막에 호출()
+)<string, GithubProfile, AxiosError>(); // <>으로 각 액션들의 payload 타입을 순서대로 넣어주면 됨, 마지막에 호출()
 
 // // 액션 생성 함수
 // export const getUserProfile = createStandardAction(GET_USER_PROFILE)();
