@@ -1,18 +1,26 @@
-import {GET_USER_PROFILE, getUserProfileAsync} from "./actions";
-import {call, put, takeEvery} from 'redux-saga/effects'
-import {getUserProfile, GithubProfile} from "../../api/github";
+import {GET_USER_PROFILE, getUserProfileAsync} from './actions';
+import {takeEvery} from 'redux-saga/effects';
+import {getUserProfile} from '../../api/github';
+import createAsyncSaga from '../../lib/createAsyncSaga';
 // call: 특정함수 호출
 // put: 특정액션 디스패치
 // takeEvery: 특정 액션을 모니터링 하고 있다가 사전에 정의한 saga함수 호출
 
-function* getUserProfileSaga(action: ReturnType<typeof getUserProfileAsync.request>) {
-  try {
-    const userProfile: GithubProfile = yield call(getUserProfile, action.payload); // userProfile의 type을 선언해줘야 함
-    yield put(getUserProfileAsync.success(userProfile));
-  } catch (e) {
-    yield put(getUserProfileAsync.failure(e));
-  }
-}
+// function* getUserProfileSaga(
+//   action: ReturnType<typeof getUserProfileAsync.request>,
+// ) {
+//   try {
+//     const userProfile: GithubProfile = yield call(
+//       getUserProfile,
+//       action.payload,
+//     ); // userProfile의 type을 선언해줘야 함
+//     yield put(getUserProfileAsync.success(userProfile));
+//   } catch (e) {
+//     yield put(getUserProfileAsync.failure(e));
+//   }
+// }
+
+const getUserProfileSaga = createAsyncSaga(getUserProfileAsync, getUserProfile);
 
 export function* githubSaga() {
   yield takeEvery(GET_USER_PROFILE, getUserProfileSaga);
