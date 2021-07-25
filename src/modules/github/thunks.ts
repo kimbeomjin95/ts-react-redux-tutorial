@@ -1,7 +1,3 @@
-import { Dispatch } from 'redux';
-import { getUserProfile, GithubProfile } from '../../api/github';
-import { getUserProfileAsync } from './actions';
-
 // ThunkAction<R, S, E, A>
 // R: return type(thunk함수에서 리턴하는 타입)
 // S: state(상태), RootState

@@ -1,8 +1,8 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import GithubProfileInfo from '../components/GithubProfileInfo';
 import GithubUsernameForm from '../components/GithubUsernameForm';
-import { RootState } from '../modules';
+import {RootState} from '../modules';
 import {getUserProfileAsync} from '../modules/github';
 
 function GithubProfileLoader() {

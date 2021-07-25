@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux';
+import {combineReducers} from 'redux';
 import counter from './counter';
 import github, {githubSaga} from './github';
 import todos from './todos';
