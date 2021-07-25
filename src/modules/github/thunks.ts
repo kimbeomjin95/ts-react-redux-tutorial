@@ -10,15 +10,15 @@ import { getUserProfileAsync } from './actions';
 // export function getUserProfileThunk(username: string): ThunkAction<void, RootState, null, GithubProfile> { // getUserProfileThunk의 결과값이 ThunkAction
 
 // velopert 선호(thunk 함수)
-export function getUserProfileThunk(username: string) {
-  return async (dispatch: Dispatch) => {
-    const { request, success, failure } = getUserProfileAsync;
-    dispatch(request());
-    try {
-      const userProfile = await getUserProfile(username);
-      dispatch(success(userProfile));
-    } catch (e) {
-      dispatch(failure(e));
-    }
-  };
-}
+// export function getUserProfileThunk(username: string) {
+//   return async (dispatch: Dispatch) => {
+//     const { request, success, failure } = getUserProfileAsync;
+//     dispatch(request());
+//     try {
+//       const userProfile = await getUserProfile(username);
+//       dispatch(success(userProfile));
+//     } catch (e) {
+//       dispatch(failure(e));
+//     }
+//   };
+// }
