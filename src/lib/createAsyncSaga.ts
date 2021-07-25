@@ -7,6 +7,7 @@ type PromiseCreatorFunction<P, T> =
   | (() => Promise<T>); // promiseCreator가 파라미터가 없는 경우도 작동할 수 있게 적용
 
 // 타입 가드 문법
+//
 // action.payload가 undefined가 아니라면 파라미터로 받아온 action은 PayloadAction 타입을 의미
 // PayloadAction<액션타입, payload>
 function isPayloadAction(action: any): action is PayloadAction<string, any> {
